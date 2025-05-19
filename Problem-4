@@ -1,0 +1,24 @@
+public class MultiplesCounter {
+    public static void main(String[] args) {
+        int[] input = {1, 2, 8, 9, 12, 46, 76, 82, 15, 20, 30};
+        int[] counts = new int[9]; // index 0 for divisor 1, index 8 for divisor 9
+
+        for (int num : input) {
+            for (int i = 1; i <= 9; i++) {
+                if (num % i == 0) {
+                    counts[i - 1]++; // i-1 because array index starts from 0
+                }
+            }
+        }
+
+        // Print the result
+       System.out.print("{");
+        for (int i = 1; i <= 9; i++) {
+            System.out.print(i + ":" +counts[i - 1]);
+            if (i < 9) {
+                System.out.print(",");
+            }
+        }
+        System.out.println("}");
+    }
+}
