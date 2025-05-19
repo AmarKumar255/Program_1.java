@@ -9,7 +9,7 @@ class Calculator {
 	public void setInputs(double a, double b, String operation) {
 		this.a = a;
 		this.b = b;
-		this.operation = operation.toLowerCase(); // Normalize input
+		this.operation = operation.toLowerCase(); 
 	}
 
 	// Method to perform calculation
