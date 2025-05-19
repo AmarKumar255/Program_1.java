@@ -1,1 +1,26 @@
-Problem-3
+import java.util.Scanner;
+
+public class OddSeriesGenerator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Input a single integer
+        System.out.print("Enter value of a: ");
+        int a = scanner.nextInt();
+
+        // If a is even, decrement by 1
+        if (a % 2 == 0) {
+            a -= 1;
+        }
+
+        // Print odd numbers from 1 to (2a - 1)
+        for (int i = 1; i <= (2 * a - 1); i += 2) {
+            System.out.print(i);
+            if (i + 2 <= (2 * a - 1)) {
+                System.out.print(", ");
+            }
+        }
+
+        scanner.close();
+    }
+}
